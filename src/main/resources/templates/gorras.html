@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gorras</title>
+</head>
+<body>
+    <h1>Listado de Gorras</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="gorra : ${gorras}">
+                <td th:text="${gorra.id}"></td>
+                <td th:text="${gorra.descripcion}"></td>
+                <td th:text="${gorra.precio}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
